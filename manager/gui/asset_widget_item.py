@@ -5,12 +5,13 @@
 import logging
 import os
 
-from PySide6 import QtWidgets
-from PySide6.QtWidgets import QMainWindow
+from PySide2 import QtWidgets
+from PySide2.QtWidgets import QMainWindow
 
-from Core import core_paths as cpath
+from val_asset_manager.manager.util import valkyrie_asset as val
 
-from Asset.AssetManager.src.util import valkyrie_asset as val
+from val_core.paths import core_paths as cpath
+
 
 # Main paths
 MAIN_PATHS = cpath.core_paths()

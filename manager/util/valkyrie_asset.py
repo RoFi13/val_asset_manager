@@ -6,9 +6,9 @@ import os
 from pathlib import PurePath
 import re
 
-from Core import core_paths as cpath
-from Core.util import file_util_tools as fut
-from Core.util import project_util_tools as prj
+from val_core.paths import core_paths as cpath
+from val_core.util import file_util_tools as fut
+from val_core.util import project_util_tools as prj
 
 
 LOG = logging.getLogger(os.path.basename(__file__))

@@ -8,17 +8,17 @@ import logging
 import os
 from typing import TYPE_CHECKING
 
-from PySide6 import QtGui, QtWidgets
-from PySide6.QtCore import Qt, QSize
-from PySide6.QtUiTools import QUiLoader
-from PySide6.QtWidgets import QMainWindow
+from PySide2 import QtGui, QtWidgets
+from PySide2.QtCore import Qt, QSize
+from PySide2.QtUiTools import QUiLoader
+from PySide2.QtWidgets import QMainWindow
 
-from Core import core_paths as cpath
-from Core.ui.UIUtilTools.src import pyside_util_tools as put
-from Core.util import file_util_tools as fut
+from val_core.paths import core_paths as cpath
+from val_core.ui import pyside_util_tools as put
+from val_core.util import file_util_tools as fut
 
-from Asset.AssetManager.src.util import asset_manager_utils as amu
-from Asset.AssetManager.src.util import valkyrie_asset as val
+from val_asset_manager.manager.util import asset_manager_utils as amu
+from val_asset_manager.manager.util import valkyrie_asset as val
 
 from . import asset_widget_item as awi
 from . import file_widget_item as fwi

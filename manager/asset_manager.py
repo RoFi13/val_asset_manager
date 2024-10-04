@@ -3,7 +3,7 @@
 This module is to create both a APB/wip (asset pre-build) or a Published Maya
 file.
 """
-# Can't find PySide6 modules pylint: disable=I1101
+# Can't find PySide2 modules pylint: disable=I1101
 
 __version__ = "1.0.1"
 
@@ -12,20 +12,20 @@ import logging
 import os
 import re
 
-from PySide6 import QtCore, QtWidgets
-from PySide6.QtUiTools import QUiLoader
+from PySide2 import QtCore, QtWidgets
+from PySide2.QtUiTools import QUiLoader
 
-from Core import core_paths as cpath
-from Core import maya_start as ms
-from Core.ui.UIUtilTools.src import maya_ui_util_tools as mui
-from Core.ui.UIUtilTools.src import pyside_util_tools as put
-from Core.ui.UIUtilTools.src import snipping_widget as snip
-from Core.util import file_util_tools as fut
-from Core.util import maya_file_util_tools as mfut
-from Core.util import project_util_tools as prj
-from Core.util import string_util_tools as sut
+from val_core.maya import maya_start as ms
+from val_core.paths import core_paths as cpath
+from val_core.ui import maya_ui_util_tools as mui
+from val_core.ui import pyside_util_tools as put
+from val_core.ui import snipping_widget as snip
+from val_core.util import file_util_tools as fut
+from val_core.util import maya_file_util_tools as mfut
+from val_core.util import project_util_tools as prj
+from val_core.util import string_util_tools as sut
 
-from Util.UtilTools.src import util_tools as utt
+from val_util_tools.util import util_tools as utt
 
 from .gui import asset_gui_utils as agu
 from .gui import asset_list_utils as alu
@@ -34,6 +34,10 @@ from .util import validation_utils as vu
 
 # Import maya modules
 from maya import cmds
+
+from importlib import reload
+
+reload(snip)
 
 LOADER = QUiLoader()
 

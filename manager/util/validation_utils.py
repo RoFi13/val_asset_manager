@@ -6,10 +6,10 @@ import logging
 import os
 import re
 
-from PySide6.QtWidgets import QMainWindow
+from PySide2.QtWidgets import QMainWindow
 
-from Core.util import project_util_tools as prj
-from Core.ui.UIUtilTools.src import maya_ui_util_tools as mui
+from val_core.util import project_util_tools as prj
+from val_core.ui import maya_ui_util_tools as mui
 
 from maya import cmds
 

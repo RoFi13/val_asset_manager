@@ -6,10 +6,10 @@
 import logging
 import os
 
-from PySide6 import QtWidgets
+from PySide2 import QtWidgets
 
-from Core import core_paths as cpath
-from Core.util import maya_file_util_tools as mut
+from val_core.paths import core_paths as cpath
+from val_core.util import maya_file_util_tools as mut
 
 from . import asset_widget_item as awi
 

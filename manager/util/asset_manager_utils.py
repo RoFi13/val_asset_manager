@@ -5,17 +5,17 @@
 import logging
 import os
 
-from PySide6 import QtGui
-from PySide6.QtUiTools import QUiLoader
-from PySide6.QtWidgets import QMainWindow
+from PySide2 import QtGui
+from PySide2.QtUiTools import QUiLoader
+from PySide2.QtWidgets import QMainWindow
 
-from Core.util import file_util_tools as fut
-from Core.util import project_util_tools as prj
+from val_core.util import file_util_tools as fut
+from val_core.util import project_util_tools as prj
 
-from Asset.AssetManager.src.gui import asset_list_utils as alu
-from Asset.AssetManager.src.gui import asset_widget_item as awi
-from Asset.AssetManager.src.gui import file_widget_item as fwi
-from Asset.AssetManager.src.util import valkyrie_asset as val
+from val_asset_manager.manager.gui import asset_list_utils as alu
+from val_asset_manager.manager.gui import asset_widget_item as awi
+from val_asset_manager.manager.gui import file_widget_item as fwi
+from val_asset_manager.manager.util import valkyrie_asset as val
 
 LOADER = QUiLoader()
 
