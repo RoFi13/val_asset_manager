@@ -11,6 +11,7 @@ from PySide2.QtWidgets import QMainWindow
 
 from val_core.util import project_util_tools as prj
 from val_core.ui import maya_ui_util_tools as mui
+from val_core.ui import snipping_widget
 
 from . import asset_list_utils as alu
 
@@ -90,16 +91,23 @@ def set_asset_naming_tooltips(root_object: QtWidgets.QWidget):
     root_object.line_publish_variation.setToolTip(asset_variant_tooltip)
 
 
-def save_qlabel_pixmap_to_disk(label: QtWidgets.QLabel, save_path: str):
+# def save_qlabel_pixmap_to_disk(label: QtWidgets.QLabel, save_path: str):
+def save_qlabel_pixmap_to_disk(
+    label: snipping_widget.CustomPreviewButton, save_path: str
+):
     """Save QLabel's pixmap to disk.
 
     Saves image as .jpg format.
 
     Args:
-        label (QtWidgets.QLabel): QLabel object with pixmap.
+        label (snipping_widget.CustomPreviewButton): QLabel object with pixmap.
         save_path (str): Save path of jpeg image.
     """
     LOG.debug("SAVING QLABEL PIXMAP TO: %s", save_path)
+    if label.custom_pixmap is not None:
+        label.custom_pixmap.save(save_path, "JPG")
+        return
+
     label.pixmap().save(save_path, "JPG")
 
 
